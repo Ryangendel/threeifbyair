@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3 If By Air · Lakefront Restaurant &amp; Resort · Wisconsin</title>
+  <meta name="description" content="3 If By Air — a lakefront restaurant, resort, and homestead community on the water in Wisconsin. Seasonal Midwestern dining, lakeside patio, and reservations." />
+
+  <!-- Favicon (uses the restaurant logo) -->
+  <link rel="icon" type="image/png" href="3IfByAir_v3-1.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="#home" class="brand" aria-label="3 If By Air home">
+        <img src="3IfByAir_v3-1.png" alt="3 If By Air logo" class="brand-logo" />
+        <span class="brand-text">
+          <span class="brand-name">3 If By Air</span>
+          <span class="brand-sub">Lakefront Restaurant &amp; Resort</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Visit</a>
+        <a href="#reserve" class="nav-cta">Reserve a Table</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <!-- Parallax lakeview background (moves on scroll via script.js).
+         To use a different photo, swap the file at photos/hero-lakeview.jpg -->
+    <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Restaurant · Lakefront Resort · Homestead Community</p>
+      <h1 class="hero-title">Warm light on the water.</h1>
+      <p class="hero-lede">
+        Three lanterns, one welcome. Gather lakeside in Wisconsin for seasonal Midwestern
+        cooking, a glowing patio at dusk, and the kind of evening you linger over.
+      </p>
+      <div class="hero-actions">
+        <a href="#reserve" class="btn btn-gold">Reserve a Table</a>
+        <a href="#menu" class="btn btn-ghost">View the Menu</a>
+      </div>
+      <p class="hero-hours">Open Tue–Sun · Dinner nightly · Weekend lakeside brunch</p>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">Our Story</p>
+        <h2 class="section-title">Three lanterns on the shore</h2>
+        <p>
+          The old signal was simple — <em>one if by land, two if by sea.</em> We light a third:
+          a welcome home by the water. <strong>3 If By Air</strong> sits on the Wisconsin lakeshore
+          where a restaurant, a lakefront resort, and a homestead community share one long dock and
+          one big table.
+        </p>
+        <p>
+          Our kitchen cooks the way the seasons ask us to — Midwestern at heart, sourced from the
+          farms, creameries, and waters that surround us. Come as you are, stay as long as you like,
+          and watch the lanterns come up as the sun goes down.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">1878</span>
+            <span class="stat-label">Homestead roots</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Lake views</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Ways to gather</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-cards">
+        <article class="pillar">
+          <span class="pillar-icon" aria-hidden="true">🍽️</span>
+          <h3>The Restaurant</h3>
+          <p>Seasonal plates, a proper supper-club spirit, and cheese curds worth the drive.</p>
+        </article>
+        <article class="pillar">
+          <span class="pillar-icon" aria-hidden="true">🛶</span>
+          <h3>Lakefront Resort</h3>
+          <p>Stay the weekend — dockside cabins, morning coffee, and sunset off the pier.</p>
+        </article>
+        <article class="pillar">
+          <span class="pillar-icon" aria-hidden="true">🏡</span>
+          <h3>Homestead Community</h3>
+          <p>Neighbors, gardens, and gatherings that keep the porch lights on all year.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MENU ===================== -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">From the Kitchen</p>
+        <h2 class="section-title">A taste of the lake</h2>
+        <p class="section-intro">
+          Menus change with the season and the day's catch. Below is a sample of what you'll find on the table.
+        </p>
+      </div>
+
+      <div class="menu-tabs" id="menuTabs" role="tablist" aria-label="Menu categories">
+        <button class="menu-tab is-active" role="tab" aria-selected="true" data-tab="starters">Starters</button>
+        <button class="menu-tab" role="tab" aria-selected="false" data-tab="mains">Mains</button>
+        <button class="menu-tab" role="tab" aria-selected="false" data-tab="lakeside">Lakeside &amp; Shareable</button>
+        <button class="menu-tab" role="tab" aria-selected="false" data-tab="sweets">Sweets &amp; Sips</button>
+      </div>
+
+      <div class="menu-panels">
+        <!-- Starters -->
+        <div class="menu-panel is-active" data-panel="starters">
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Ellsworth Cheese Curds</h4><span class="dots"></span><span class="price">14</span></div>
+            <p>Beer-battered, fried golden, honey-mustard aioli.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Door County Cherry Salad</h4><span class="dots"></span><span class="price">13</span></div>
+            <p>Dried cherries, candied walnuts, chèvre, maple vinaigrette.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Smoked Whitefish Dip</h4><span class="dots"></span><span class="price">15</span></div>
+            <p>Lake-caught whitefish, dill, capers, grilled sourdough.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>French Onion &amp; Ale Soup</h4><span class="dots"></span><span class="price">11</span></div>
+            <p>Sweet onions, Wisconsin lager, Gruyère crust.</p>
+          </div>
+        </div>
+
+        <!-- Mains -->
+        <div class="menu-panel" data-panel="mains">
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Friday Fish Fry</h4><span class="dots"></span><span class="price">22</span></div>
+            <p>Beer-battered cod, potato pancakes, coleslaw, rye &amp; onion.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Cast-Iron Walleye</h4><span class="dots"></span><span class="price">31</span></div>
+            <p>Pan-seared walleye, brown butter, wild rice, charred lemon.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Supper-Club Ribeye</h4><span class="dots"></span><span class="price">42</span></div>
+            <p>14 oz, garlic butter, twice-baked potato, relish tray.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Harvest Garden Risotto</h4><span class="dots"></span><span class="price">24</span></div>
+            <p>Roasted squash, sage, toasted pepitas, aged Parmesan. <span class="tag">V</span></p>
+          </div>
+        </div>
+
+        <!-- Lakeside -->
+        <div class="menu-panel" data-panel="lakeside">
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Dockside Shore Lunch</h4><span class="dots"></span><span class="price">28</span></div>
+            <p>Fried fresh catch, hush puppies, corn, tartar &amp; hot sauce.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Three-Napkin Hot Beef</h4><span class="dots"></span><span class="price">17</span></div>
+            <p>Slow-braised beef, house roll, natural jus, crispy onions.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Lantern Board</h4><span class="dots"></span><span class="price">26</span></div>
+            <p>Wisconsin cheeses, cured meats, honeycomb, pickles, bread. <span class="tag">Shareable</span></p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Campfire Flatbread</h4><span class="dots"></span><span class="price">16</span></div>
+            <p>Smoked mozzarella, caramelized onion, wild mushroom, thyme.</p>
+          </div>
+        </div>
+
+        <!-- Sweets & Sips -->
+        <div class="menu-panel" data-panel="sweets">
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Grasshopper Ice Cream Pie</h4><span class="dots"></span><span class="price">10</span></div>
+            <p>The supper-club classic, chocolate crust, minted cream.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Warm Apple Skillet</h4><span class="dots"></span><span class="price">11</span></div>
+            <p>Orchard apples, oat crumble, vanilla-bean ice cream.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Old Fashioned, Wisconsin Style</h4><span class="dots"></span><span class="price">12</span></div>
+            <p>Brandy, muddled cherry &amp; orange, a splash of soda.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head"><h4>Lakehouse Coffee &amp; Cordials</h4><span class="dots"></span><span class="price">9</span></div>
+            <p>Fresh-brewed with your choice of nightcap.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="menu-note">
+        Please let us know about allergies or dietary needs — our kitchen is happy to help.
+        <span class="tag">V</span> vegetarian.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">On the Water</p>
+        <h2 class="section-title">More than a meal</h2>
+      </div>
+      <div class="exp-grid">
+        <article class="exp-card">
+          <h3>Lakeside Patio</h3>
+          <p>Dine at the water's edge as the lanterns glow. First-come seating, weather permitting.</p>
+        </article>
+        <article class="exp-card">
+          <h3>Weekend Brunch</h3>
+          <p>Saturday &amp; Sunday mornings — griddle classics, bloody marys, and a view.</p>
+        </article>
+        <article class="exp-card">
+          <h3>Private Events</h3>
+          <p>Rehearsal dinners, reunions, and celebrations in our boathouse room. Ask about buyouts.</p>
+        </article>
+        <article class="exp-card">
+          <h3>Live Music Nights</h3>
+          <p>Local acoustic sets on the deck through the summer season. Check our calendar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-head center">
+        <p class="eyebrow">A Look Around</p>
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-intro">Sunset off the dock, the patio at golden hour, plates worth photographing.</p>
+      </div>
+
+      <!-- Swap any photo by replacing the file in the photos/ folder (keep the same name),
+           or change the src below. Captions appear on hover. -->
+      <div class="gallery-grid" id="galleryGrid">
+        <figure class="tile tile-a" data-caption="Fresh from the lake">
+          <img src="photos/lake-fish.jpg" alt="Pan-seared fish plated over garden vegetables" loading="lazy" />
+        </figure>
+        <figure class="tile tile-b" data-caption="Dinner at dusk">
+          <img src="photos/dinner-dusk.jpg" alt="A plated course served by candlelight" loading="lazy" />
+        </figure>
+        <figure class="tile tile-c" data-caption="Stay the weekend">
+          <img src="photos/resort-cabin.jpg" alt="A lakefront resort cabin tucked in the pines" loading="lazy" />
+        </figure>
+        <figure class="tile tile-d" data-caption="Our homestead community">
+          <img src="photos/homestead-barn.jpg" alt="A red barn among autumn trees on the homestead" loading="lazy" />
+        </figure>
+        <figure class="tile tile-e" data-caption="Gather at the big table">
+          <img src="photos/dining-room.jpg" alt="The warm, wood-accented dining room" loading="lazy" />
+        </figure>
+        <figure class="tile tile-f" data-caption="Dining at the water's edge">
+          <img src="photos/lakeside-patio.jpg" alt="Tables set on the lakeside patio at golden hour" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESERVATIONS ===================== -->
+  <section class="section reserve" id="reserve">
+    <div class="container reserve-grid">
+      <div class="reserve-intro">
+        <p class="eyebrow light">Join Us</p>
+        <h2 class="section-title light">Reserve your table</h2>
+        <p class="light-copy">
+          Tell us when you'd like to come and how big your party is. Submitting will create your
+          reservation request and open a pre-filled email to our host stand — we'll confirm by
+          email. For same-day or large parties, please note it in your request.
+        </p>
+        <ul class="reserve-facts">
+          <li><strong>Party of 9+?</strong> Add a note below and we'll confirm by email.</li>
+          <li><strong>Same-day seating?</strong> Send a request — we'll always try.</li>
+          <li><strong>Lakeside patio</strong> is first-come, weather permitting.</li>
+        </ul>
+      </div>
+
+      <div class="reserve-card">
+        <!-- No backend required. This form validates in the browser, saves the request to
+             localStorage, and opens a pre-filled email. To route submissions to a service
+             instead, set the form's action to your Formspree endpoint and method="post". -->
+        <form id="reserveForm" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="rName">Full name</label>
+              <input type="text" id="rName" name="name" autocomplete="name" required />
+              <small class="error" data-for="rName"></small>
+            </div>
+            <div class="field">
+              <label for="rParty">Party size</label>
+              <select id="rParty" name="party" required>
+                <option value="">Select…</option>
+                <option>1</option><option>2</option><option>3</option><option>4</option>
+                <option>5</option><option>6</option><option>7</option><option>8</option>
+                <option value="9+">9 or more (add a note)</option>
+              </select>
+              <small class="error" data-for="rParty"></small>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="rEmail">Email</label>
+              <input type="email" id="rEmail" name="email" autocomplete="email" required />
+              <small class="error" data-for="rEmail"></small>
+            </div>
+            <div class="field">
+              <label for="rPhone">Phone</label>
+              <input type="tel" id="rPhone" name="phone" autocomplete="tel" required />
+              <small class="error" data-for="rPhone"></small>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="rDate">Date</label>
+              <input type="date" id="rDate" name="date" required />
+              <small class="error" data-for="rDate"></small>
+            </div>
+            <div class="field">
+              <label for="rTime">Time</label>
+              <select id="rTime" name="time" required>
+                <option value="">Pick a date first…</option>
+              </select>
+              <small class="error" data-for="rTime"></small>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="rSeating">Seating preference</label>
+              <select id="rSeating" name="seating">
+                <option value="No preference">No preference</option>
+                <option value="Indoor dining room">Indoor dining room</option>
+                <option value="Lakeside patio (weather permitting)">Lakeside patio (weather permitting)</option>
+                <option value="Bar / lounge">Bar / lounge</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="rOccasion">Occasion <span class="opt">(optional)</span></label>
+              <select id="rOccasion" name="occasion">
+                <option value="">—</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Date night</option>
+                <option>Business</option>
+                <option>Celebration</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="rNotes">Special requests <span class="opt">(optional)</span></label>
+            <textarea id="rNotes" name="notes" rows="3" placeholder="Allergies, high chair, accessibility, a quiet corner…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-block">Request Reservation</button>
+          <p class="form-fineprint">A request is not a confirmed booking until we reply. We'll be in touch shortly.</p>
+        </form>
+
+        <!-- Confirmation shown after submit -->
+        <div class="reserve-success" id="reserveSuccess" hidden>
+          <div class="success-mark" aria-hidden="true">
+            <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M14 27l8 8 16-16"/></svg>
+          </div>
+          <h3>Reservation request sent</h3>
+          <p id="successSummary"></p>
+          <p class="conf-ref">Reference: <span id="confRef"></span></p>
+          <p class="success-note">
+            An email draft should have opened for you to send. If it didn't, please email us
+            and mention your reference number.
+          </p>
+          <button type="button" class="btn btn-ghost dark" id="reserveAgain">Make another request</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VISIT / HOURS / LOCATION ===================== -->
+  <section class="section visit" id="visit">
+    <div class="container visit-grid">
+      <div class="visit-col">
+        <p class="eyebrow">Hours</p>
+        <h2 class="section-title">When we're open</h2>
+        <ul class="hours-list" id="hoursList">
+          <li><span>Monday</span><span>Closed</span></li>
+          <li><span>Tuesday</span><span>4:00 – 9:00 PM</span></li>
+          <li><span>Wednesday</span><span>4:00 – 9:00 PM</span></li>
+          <li><span>Thursday</span><span>4:00 – 9:00 PM</span></li>
+          <li><span>Friday</span><span>11:00 AM – 10:00 PM</span></li>
+          <li><span>Saturday</span><span>10:00 AM – 10:00 PM</span></li>
+          <li><span>Sunday</span><span>10:00 AM – 9:00 PM</span></li>
+        </ul>
+        <p class="hours-note">Weekend brunch served Sat &amp; Sun, 10:00 AM – 1:00 PM.</p>
+      </div>
+
+      <div class="visit-col">
+        <p class="eyebrow">Find Us</p>
+        <h2 class="section-title">On the lakeshore</h2>
+        <address class="contact-block">
+          <p><strong>3 If By Air</strong><br />
+          Wisconsin</p>
+          <div class="visit-actions">
+            <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=Wisconsin" target="_blank" rel="noopener">Get Directions</a>
+            <a class="btn btn-ghost dark" href="#reserve">Reserve a Table</a>
+          </div>
+        </address>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="3IfByAir_v3-1.png" alt="3 If By Air" class="footer-logo" />
+        <p>Restaurant · Lakefront Resort · Homestead Community · Wisconsin</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reserve">Reservations</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="TripAdvisor">TripAdvisor</a>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>&copy; <span id="year"></span> 3 If By Air. All rights reserved. · One if by land, two if by sea — three if by air.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
