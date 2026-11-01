@@ -1,474 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3 If By Air · Lakefront Restaurant &amp; Resort · Wisconsin</title>
-  <meta name="description" content="3 If By Air — a lakefront restaurant, resort, and homestead community on the water in Wisconsin. Seasonal Midwestern dining, lakeside patio, and reservations." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three If By Air — Lakefront Resort · Restaurant · Survival Community</title>
+<meta name="description" content="Three If By Air: a lakefront resort, restaurant and Fortitude Ranch survival community on a private 18-acre Wisconsin peninsula, reachable by land, water or air. Now raising $1.2M in a Reg CF community round.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#1d3a2c; --forest-2:#24473a; --deep:#132a1f;
+  --gold:#d9a441; --gold-soft:#f1d9a0; --cream:#f5f0e5; --paper:#fbf8f2;
+  --ink:#1c2620; --muted:#5b6a61; --lake:#2c6a85; --line:#e3dccd;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Source Sans 3",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:18px;line-height:1.6}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:"Zilla Slab",Georgia,serif;line-height:1.15;margin:0 0 .5em}
+h2{font-size:clamp(1.9rem,3.4vw,2.6rem);color:var(--forest)}
+h3{font-size:1.3rem;color:var(--forest)}
+a{color:var(--lake)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:.6em}
+section{padding:88px 0}
+.lead{font-size:1.15rem;color:var(--muted);max-width:760px}
+.btn{display:inline-block;padding:14px 26px;border-radius:6px;font-weight:700;text-decoration:none;transition:.2s}
+.btn-gold{background:var(--gold);color:var(--deep)}
+.btn-gold:hover{background:#e8b553}
+.btn-line{border:2px solid rgba(255,255,255,.7);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
 
-  <!-- Favicon (uses the restaurant logo) -->
-  <link rel="icon" type="image/png" href="3IfByAir_v3-1.png" />
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:var(--deep);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:"Zilla Slab",serif;font-size:1.3rem;font-weight:700}
+.brand img{width:40px;height:40px}
+.nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;align-items:center}
+.nav ul a{color:#e9e4d6;text-decoration:none;font-size:.95rem;font-weight:600}
+.nav ul a:hover{color:var(--gold)}
+.nav .cta{background:var(--gold);color:var(--deep)!important;padding:9px 16px;border-radius:5px}
+.menu-btn{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+@media(max-width:940px){
+  .menu-btn{display:block}
+  .nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:var(--deep);flex-direction:column;padding:18px 24px 26px;gap:16px;align-items:flex-start}
+  .nav ul.open{display:flex}
+}
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+/* hero */
+.hero{position:relative;color:#fff;min-height:88vh;display:flex;align-items:center;padding:120px 0 90px;
+  background:linear-gradient(100deg,rgba(19,42,31,.92) 0%,rgba(19,42,31,.72) 45%,rgba(19,42,31,.25) 100%),url(img/aerial.jpg) center/cover}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin-bottom:.25em}
+.hero h1 span{color:var(--gold)}
+.hero .sub{font-size:1.25rem;max-width:620px;color:#eae6da;margin-bottom:1.6em}
+.lanterns{display:flex;gap:28px;margin:0 0 28px}
+.lanterns div{text-align:center;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft)}
+.lanterns .row{display:flex;gap:4px;justify-content:center;height:40px;margin-bottom:6px}
+.lanterns img{height:40px;width:auto;filter:drop-shadow(0 0 8px rgba(217,164,65,.7))}
+.pill{display:inline-block;background:rgba(217,164,65,.16);border:1px solid var(--gold);color:var(--gold-soft);padding:6px 14px;border-radius:30px;font-size:.88rem;font-weight:600;margin-bottom:22px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-badge{position:absolute;right:5%;bottom:60px;width:190px;opacity:.95}
+@media(max-width:900px){.hero-badge{display:none}}
 
-  <link rel="stylesheet" href="styles.css" />
+/* namesake */
+.namesake{background:var(--forest);color:#fff;text-align:center}
+.namesake h2{color:#fff}
+.namesake .lead{color:#d6dccf;margin:0 auto 46px}
+.signals{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.signal{background:var(--forest-2);border-radius:10px;padding:34px 22px}
+.signal .row{display:flex;justify-content:center;gap:8px;height:64px;margin-bottom:18px}
+.signal .row img{height:64px;width:auto;filter:drop-shadow(0 0 12px rgba(217,164,65,.6))}
+.signal h3{color:#fff;margin-bottom:.2em}
+.signal .k{color:var(--gold);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.signal p{color:#cfd6ca;margin:.4em 0 0;font-size:1rem}
+.foot-note{color:#aebaa9;font-size:.88rem;max-width:760px;margin:36px auto 0;font-style:italic}
+@media(max-width:760px){.signals{grid-template-columns:1fr}}
+
+/* property */
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:12px;margin:36px 0 40px}
+.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:8px}
+.gallery figure:first-child{grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 10px;color:#fff;font-size:.88rem;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+@media(max-width:800px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gallery figure:first-child{grid-column:span 2;grid-row:auto}.gallery figure{height:200px}}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.facts ul{list-style:none;padding:0;margin:0}
+.facts li{padding:11px 0 11px 30px;border-bottom:1px solid var(--line);position:relative}
+.facts li:before{content:"";position:absolute;left:4px;top:20px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.mini-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mini-photos figure{margin:0}
+.mini-photos img{border-radius:8px;height:170px;width:100%;object-fit:cover}
+.mini-photos figcaption{font-size:.85rem;color:var(--muted);margin-top:4px}
+.confidential{margin-top:22px;background:var(--forest);color:#e7ecdf;border-radius:8px;padding:14px 18px;font-size:.95rem}
+.confidential b{color:var(--gold)}
+@media(max-width:800px){.facts{grid-template-columns:1fr}}
+
+/* access */
+.access{background:var(--cream)}
+.way{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:64px}
+.way:nth-of-type(even) .way-img{order:2}
+.way-img img{border-radius:10px;width:100%;box-shadow:0 14px 34px rgba(0,0,0,.12)}
+.way .count{display:flex;gap:6px;height:44px;margin-bottom:10px}
+.way .count img{height:44px;width:auto}
+.way .tag{font-family:"Zilla Slab",serif;font-style:italic;color:var(--gold);font-size:1.05rem}
+.way ul{padding-left:20px;margin:.6em 0 0}
+.way li{margin:.35em 0}
+@media(max-width:800px){.way{grid-template-columns:1fr;gap:22px}.way:nth-of-type(even) .way-img{order:0}}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px}
+.card h3{margin-bottom:.35em}
+.card p{margin:0;color:var(--muted);font-size:1rem}
+@media(max-width:860px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}}
+.planned{font-size:.9rem;color:var(--muted);margin-top:22px;font-style:italic}
+.species{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.species .card ul{columns:2;padding-left:18px;margin:.4em 0 0;color:var(--ink);font-size:1rem}
+@media(max-width:700px){.species{grid-template-columns:1fr}}
+
+/* FR */
+.fr{background:var(--deep);color:#e6eadf}
+.fr h2{color:#fff}
+.fr .lead{color:#c3ccbd}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px}
+.duo .box{border-radius:10px;padding:30px}
+.duo .getaway{background:var(--gold);color:var(--deep)}
+.duo .getaway h3{color:var(--deep)}
+.duo .insure{background:var(--forest-2);border:1px solid #3b5d4d}
+.duo .insure h3{color:#fff}
+.duo ul{padding-left:20px;margin:.5em 0 0}
+.duo li{margin:.3em 0}
+.fr-strip{display:flex;align-items:center;gap:30px;margin-top:46px;flex-wrap:wrap}
+.fr-strip img{width:130px;background:#fff;border-radius:50%;padding:6px}
+.stat{font-family:"Zilla Slab",serif;font-size:2.4rem;color:var(--gold);line-height:1}
+.stat small{display:block;font-family:"Source Sans 3",sans-serif;font-size:.9rem;color:#c3ccbd;margin-top:6px}
+@media(max-width:760px){.duo{grid-template-columns:1fr}}
+
+/* invest */
+.streams{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 30px;margin:20px 0 0;padding:0;list-style:none}
+.streams li{padding:10px 0;border-bottom:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:40px}
+.ask{background:var(--forest);color:#fff;border-radius:12px;padding:36px}
+.ask .big{font-family:"Zilla Slab",serif;font-size:4rem;color:var(--gold);line-height:1}
+.uses{margin-top:22px}
+.use{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:1rem}
+.bar{height:6px;background:rgba(255,255,255,.12);border-radius:3px;margin:-2px 0 6px}
+.bar i{display:block;height:100%;background:var(--gold);border-radius:3px}
+@media(max-width:860px){.split{grid-template-columns:1fr}.streams{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;font-size:.98rem;background:#fff;border-radius:10px;overflow:hidden}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--forest);color:#fff;font-weight:600;font-size:.88rem;letter-spacing:.03em}
+td.n{text-align:right;white-space:nowrap}
+.tables{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
+.tables h3{margin-bottom:.6em}
+.tnote{font-size:.88rem;color:var(--muted);margin-top:10px}
+@media(max-width:900px){.tables{grid-template-columns:1fr}}
+.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+@media(max-width:800px){.terms{grid-template-columns:1fr}}
+
+/* leader */
+.leader{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start;margin-top:36px}
+.leader .photo img{border-radius:12px;width:100%}
+.leader ul{padding-left:20px}
+.leader li{margin:.45em 0}
+.team{display:flex;gap:18px;margin-top:26px;flex-wrap:wrap}
+.team .card{flex:1;min-width:220px}
+.book{display:flex;gap:24px;align-items:center;margin-top:30px;background:var(--cream);border-radius:10px;padding:22px}
+.book img{width:110px;border-radius:4px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+@media(max-width:760px){.leader{grid-template-columns:1fr}.leader .photo{max-width:260px}}
+
+/* contact */
+.contact{background:linear-gradient(rgba(19,42,31,.88),rgba(19,42,31,.92)),url(img/lakefront.jpg) center/cover;color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact .lead{color:#dbe0d4;margin:0 auto 30px}
+.contact .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.contact .info{margin-top:26px;color:#cfd6ca}
+.steve{display:flex;gap:28px;align-items:center;margin-top:46px;background:var(--forest-2);border-radius:10px;padding:24px}
+.steve img{width:170px;height:170px;object-fit:cover;border-radius:50%;flex-shrink:0}
+.steve p{margin:0;color:#cfd6ca}
+@media(max-width:640px){.steve{flex-direction:column;text-align:center}}
+footer{background:#0d1d15;color:#9fae9f;font-size:.88rem;padding:44px 0}
+footer .tagline{font-family:"Zilla Slab",serif;color:var(--gold);font-size:1.15rem;margin-bottom:14px}
+footer .legal{border-top:1px solid #23392c;padding-top:18px;margin-top:18px;line-height:1.55}
+</style>
 </head>
 <body>
 
-  <!-- ===================== HEADER / NAV ===================== -->
-  <header class="site-header" id="siteHeader">
-    <div class="nav-inner">
-      <a href="#home" class="brand" aria-label="3 If By Air home">
-        <img src="3IfByAir_v3-1.png" alt="3 If By Air logo" class="brand-logo" />
-        <span class="brand-text">
-          <span class="brand-name">3 If By Air</span>
-          <span class="brand-sub">Lakefront Restaurant &amp; Resort</span>
-        </span>
-      </a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/badge.png" alt="Three If By Air lantern badge">Three If By Air</a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <ul id="nav" onclick="if(event.target.tagName==='A')this.classList.remove('open')">
+      <li><a href="#namesake">Our Name</a></li>
+      <li><a href="#property">The Property</a></li>
+      <li><a href="#access">Land · Water · Air</a></li>
+      <li><a href="#stay">Stay &amp; Play</a></li>
+      <li><a href="#fortitude">Fortitude Ranch</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a class="cta" href="#invest">Invest</a></li>
+    </ul>
+  </div>
+</header>
 
-      <nav class="nav-links" id="navLinks" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#experience">Experience</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#visit">Visit</a>
-        <a href="#reserve" class="nav-cta">Reserve a Table</a>
-      </nav>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="lanterns" aria-hidden="true">
+      <div><div class="row"><img src="img/lantern.png" alt=""></div>By land</div>
+      <div><div class="row"><img src="img/lantern.png" alt=""><img src="img/lantern.png" alt=""></div>By water</div>
+      <div><div class="row"><img src="img/lantern.png" alt=""><img src="img/lantern.png" alt=""><img src="img/lantern.png" alt=""></div>By air</div>
     </div>
-  </header>
-
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" id="home">
-    <!-- Parallax lakeview background (moves on scroll via script.js).
-         To use a different photo, swap the file at photos/hero-lakeview.jpg -->
-    <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
-
-    <div class="hero-content">
-      <p class="hero-eyebrow">Restaurant · Lakefront Resort · Homestead Community</p>
-      <h1 class="hero-title">Warm light on the water.</h1>
-      <p class="hero-lede">
-        Three lanterns, one welcome. Gather lakeside in Wisconsin for seasonal Midwestern
-        cooking, a glowing patio at dusk, and the kind of evening you linger over.
-      </p>
-      <div class="hero-actions">
-        <a href="#reserve" class="btn btn-gold">Reserve a Table</a>
-        <a href="#menu" class="btn btn-ghost">View the Menu</a>
-      </div>
-      <p class="hero-hours">Open Tue–Sun · Dinner nightly · Weekend lakeside brunch</p>
+    <h1>Drive to us. Boat to us. <span>Fly to us.</span></h1>
+    <p class="sub">A lakefront resort, restaurant, and Fortitude Ranch survival community on a private 18-acre peninsula in north central Wisconsin — a getaway in good times, and ready for anything.</p>
+    <div class="pill">Today: Fortitude Ranch Wisconsin · Raising $1.2M to launch Three If By Air</div>
+    <div class="btns">
+      <a class="btn btn-gold" href="#invest">Reserve your investment</a>
+      <a class="btn btn-line" href="#property">See the property</a>
     </div>
+  </div>
+  <img class="hero-badge" src="img/badge.png" alt="">
+</section>
 
-    <a href="#about" class="scroll-cue" aria-label="Scroll down">
-      <span></span>
-    </a>
-  </section>
-
-  <!-- ===================== ABOUT ===================== -->
-  <section class="section about" id="about">
-    <div class="container about-grid">
-      <div class="about-copy">
-        <p class="eyebrow">Our Story</p>
-        <h2 class="section-title">Three lanterns on the shore</h2>
-        <p>
-          The old signal was simple — <em>one if by land, two if by sea.</em> We light a third:
-          a welcome home by the water. <strong>3 If By Air</strong> sits on the Wisconsin lakeshore
-          where a restaurant, a lakefront resort, and a homestead community share one long dock and
-          one big table.
-        </p>
-        <p>
-          Our kitchen cooks the way the seasons ask us to — Midwestern at heart, sourced from the
-          farms, creameries, and waters that surround us. Come as you are, stay as long as you like,
-          and watch the lanterns come up as the sun goes down.
-        </p>
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-num">1878</span>
-            <span class="stat-label">Homestead roots</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">100%</span>
-            <span class="stat-label">Lake views</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">3</span>
-            <span class="stat-label">Ways to gather</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="about-cards">
-        <article class="pillar">
-          <span class="pillar-icon" aria-hidden="true">🍽️</span>
-          <h3>The Restaurant</h3>
-          <p>Seasonal plates, a proper supper-club spirit, and cheese curds worth the drive.</p>
-        </article>
-        <article class="pillar">
-          <span class="pillar-icon" aria-hidden="true">🛶</span>
-          <h3>Lakefront Resort</h3>
-          <p>Stay the weekend — dockside cabins, morning coffee, and sunset off the pier.</p>
-        </article>
-        <article class="pillar">
-          <span class="pillar-icon" aria-hidden="true">🏡</span>
-          <h3>Homestead Community</h3>
-          <p>Neighbors, gardens, and gatherings that keep the porch lights on all year.</p>
-        </article>
-      </div>
+<section class="namesake" id="namesake">
+  <div class="wrap">
+    <div class="eyebrow">Our namesake</div>
+    <h2>One if by Land, Two if by Sea, Three if by Air</h2>
+    <p class="lead">In April 1775, lanterns in the steeple of Boston's Old North Church signaled how British troops were advancing. Those lanterns warned a community of coming danger and saved lives — the same mission our survival community carries forward. We add a third signal, and turn it into how you find us: count the lanterns and you know where you've arrived.</p>
+    <div class="signals">
+      <div class="signal"><div class="row"><img src="img/lantern.png" alt=""></div><div class="k">One if by land</div><h3>At the Gate</h3><p>Drive or hike in — one lantern marks the gate.</p></div>
+      <div class="signal"><div class="row"><img src="img/lantern.png" alt=""><img src="img/lantern.png" alt=""></div><div class="k">Two if by sea</div><h3>At the Dock</h3><p>Boat or paddle in — two lanterns mark the dock.</p></div>
+      <div class="signal"><div class="row"><img src="img/lantern.png" alt=""><img src="img/lantern.png" alt=""><img src="img/lantern.png" alt=""></div><div class="k">Three if by air</div><h3>At the Airstrip</h3><p>Fly in or land a seaplane — three lanterns mark the field.</p></div>
     </div>
-  </section>
+    <p class="foot-note">"One if by land, two if by sea" was later immortalized in Longfellow's poem <em>Paul Revere's Ride</em>.</p>
+  </div>
+</section>
 
-  <!-- ===================== MENU ===================== -->
-  <section class="section menu" id="menu">
-    <div class="container">
-      <div class="section-head center">
-        <p class="eyebrow">From the Kitchen</p>
-        <h2 class="section-title">A taste of the lake</h2>
-        <p class="section-intro">
-          Menus change with the season and the day's catch. Below is a sample of what you'll find on the table.
-        </p>
-      </div>
-
-      <div class="menu-tabs" id="menuTabs" role="tablist" aria-label="Menu categories">
-        <button class="menu-tab is-active" role="tab" aria-selected="true" data-tab="starters">Starters</button>
-        <button class="menu-tab" role="tab" aria-selected="false" data-tab="mains">Mains</button>
-        <button class="menu-tab" role="tab" aria-selected="false" data-tab="lakeside">Lakeside &amp; Shareable</button>
-        <button class="menu-tab" role="tab" aria-selected="false" data-tab="sweets">Sweets &amp; Sips</button>
-      </div>
-
-      <div class="menu-panels">
-        <!-- Starters -->
-        <div class="menu-panel is-active" data-panel="starters">
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Ellsworth Cheese Curds</h4><span class="dots"></span><span class="price">14</span></div>
-            <p>Beer-battered, fried golden, honey-mustard aioli.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Door County Cherry Salad</h4><span class="dots"></span><span class="price">13</span></div>
-            <p>Dried cherries, candied walnuts, chèvre, maple vinaigrette.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Smoked Whitefish Dip</h4><span class="dots"></span><span class="price">15</span></div>
-            <p>Lake-caught whitefish, dill, capers, grilled sourdough.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>French Onion &amp; Ale Soup</h4><span class="dots"></span><span class="price">11</span></div>
-            <p>Sweet onions, Wisconsin lager, Gruyère crust.</p>
-          </div>
-        </div>
-
-        <!-- Mains -->
-        <div class="menu-panel" data-panel="mains">
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Friday Fish Fry</h4><span class="dots"></span><span class="price">22</span></div>
-            <p>Beer-battered cod, potato pancakes, coleslaw, rye &amp; onion.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Cast-Iron Walleye</h4><span class="dots"></span><span class="price">31</span></div>
-            <p>Pan-seared walleye, brown butter, wild rice, charred lemon.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Supper-Club Ribeye</h4><span class="dots"></span><span class="price">42</span></div>
-            <p>14 oz, garlic butter, twice-baked potato, relish tray.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Harvest Garden Risotto</h4><span class="dots"></span><span class="price">24</span></div>
-            <p>Roasted squash, sage, toasted pepitas, aged Parmesan. <span class="tag">V</span></p>
-          </div>
-        </div>
-
-        <!-- Lakeside -->
-        <div class="menu-panel" data-panel="lakeside">
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Dockside Shore Lunch</h4><span class="dots"></span><span class="price">28</span></div>
-            <p>Fried fresh catch, hush puppies, corn, tartar &amp; hot sauce.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Three-Napkin Hot Beef</h4><span class="dots"></span><span class="price">17</span></div>
-            <p>Slow-braised beef, house roll, natural jus, crispy onions.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Lantern Board</h4><span class="dots"></span><span class="price">26</span></div>
-            <p>Wisconsin cheeses, cured meats, honeycomb, pickles, bread. <span class="tag">Shareable</span></p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Campfire Flatbread</h4><span class="dots"></span><span class="price">16</span></div>
-            <p>Smoked mozzarella, caramelized onion, wild mushroom, thyme.</p>
-          </div>
-        </div>
-
-        <!-- Sweets & Sips -->
-        <div class="menu-panel" data-panel="sweets">
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Grasshopper Ice Cream Pie</h4><span class="dots"></span><span class="price">10</span></div>
-            <p>The supper-club classic, chocolate crust, minted cream.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Warm Apple Skillet</h4><span class="dots"></span><span class="price">11</span></div>
-            <p>Orchard apples, oat crumble, vanilla-bean ice cream.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Old Fashioned, Wisconsin Style</h4><span class="dots"></span><span class="price">12</span></div>
-            <p>Brandy, muddled cherry &amp; orange, a splash of soda.</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-head"><h4>Lakehouse Coffee &amp; Cordials</h4><span class="dots"></span><span class="price">9</span></div>
-            <p>Fresh-brewed with your choice of nightcap.</p>
-          </div>
-        </div>
-      </div>
-
-      <p class="menu-note">
-        Please let us know about allergies or dietary needs — our kitchen is happy to help.
-        <span class="tag">V</span> vegetarian.
-      </p>
+<section id="property">
+  <div class="wrap">
+    <div class="eyebrow">The property today</div>
+    <h2>A real, four-season lakefront property — already ours</h2>
+    <p class="lead">Not a concept or a rendering. This is Fortitude Ranch Wisconsin, owned and operated today by Fortitude Ranch: a former lakeside resort whose shoreline cabins and RV park earned rave reviews for years, on its own forested peninsula, with buildings, power, water, and food production already in place. If the raise succeeds, Fortitude Ranch sells the property to Three If By Air, which opens it to the public as a resort and restaurant while it continues as a Fortitude Ranch community.</p>
+    <div class="gallery">
+      <figure><img src="img/aerial.jpg" alt="Aerial view of the lodge, cabins and private lakefront"><figcaption>Aerial — lodge, cabins &amp; private lakefront</figcaption></figure>
+      <figure><img src="img/lakefront.jpg" alt="Lakefront and canoe landing"><figcaption>Lakefront &amp; canoe landing</figcaption></figure>
+      <figure><img src="img/cabins_winter.jpg" alt="Cabins in winter snow"><figcaption>Four-season cabins</figcaption></figure>
+      <figure><img src="img/lodge_solar.jpg" alt="Main lodge with solar panels on the roof"><figcaption>Solar-powered lodge</figcaption></figure>
+      <figure><img src="img/cabin_hens.jpg" alt="Cabin and chicken yard"><figcaption>Cabins &amp; laying hens</figcaption></figure>
     </div>
-  </section>
-
-  <!-- ===================== EXPERIENCE ===================== -->
-  <section class="section experience" id="experience">
-    <div class="container">
-      <div class="section-head center">
-        <p class="eyebrow">On the Water</p>
-        <h2 class="section-title">More than a meal</h2>
-      </div>
-      <div class="exp-grid">
-        <article class="exp-card">
-          <h3>Lakeside Patio</h3>
-          <p>Dine at the water's edge as the lanterns glow. First-come seating, weather permitting.</p>
-        </article>
-        <article class="exp-card">
-          <h3>Weekend Brunch</h3>
-          <p>Saturday &amp; Sunday mornings — griddle classics, bloody marys, and a view.</p>
-        </article>
-        <article class="exp-card">
-          <h3>Private Events</h3>
-          <p>Rehearsal dinners, reunions, and celebrations in our boathouse room. Ask about buyouts.</p>
-        </article>
-        <article class="exp-card">
-          <h3>Live Music Nights</h3>
-          <p>Local acoustic sets on the deck through the summer season. Check our calendar.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== GALLERY ===================== -->
-  <section class="section gallery" id="gallery">
-    <div class="container">
-      <div class="section-head center">
-        <p class="eyebrow">A Look Around</p>
-        <h2 class="section-title">Gallery</h2>
-        <p class="section-intro">Sunset off the dock, the patio at golden hour, plates worth photographing.</p>
-      </div>
-
-      <!-- Swap any photo by replacing the file in the photos/ folder (keep the same name),
-           or change the src below. Captions appear on hover. -->
-      <div class="gallery-grid" id="galleryGrid">
-        <figure class="tile tile-a" data-caption="Fresh from the lake">
-          <img src="photos/lake-fish.jpg" alt="Pan-seared fish plated over garden vegetables" loading="lazy" />
-        </figure>
-        <figure class="tile tile-b" data-caption="Dinner at dusk">
-          <img src="photos/dinner-dusk.jpg" alt="A plated course served by candlelight" loading="lazy" />
-        </figure>
-        <figure class="tile tile-c" data-caption="Stay the weekend">
-          <img src="photos/resort-cabin.jpg" alt="A lakefront resort cabin tucked in the pines" loading="lazy" />
-        </figure>
-        <figure class="tile tile-d" data-caption="Our homestead community">
-          <img src="photos/homestead-barn.jpg" alt="A red barn among autumn trees on the homestead" loading="lazy" />
-        </figure>
-        <figure class="tile tile-e" data-caption="Gather at the big table">
-          <img src="photos/dining-room.jpg" alt="The warm, wood-accented dining room" loading="lazy" />
-        </figure>
-        <figure class="tile tile-f" data-caption="Dining at the water's edge">
-          <img src="photos/lakeside-patio.jpg" alt="Tables set on the lakeside patio at golden hour" loading="lazy" />
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== RESERVATIONS ===================== -->
-  <section class="section reserve" id="reserve">
-    <div class="container reserve-grid">
-      <div class="reserve-intro">
-        <p class="eyebrow light">Join Us</p>
-        <h2 class="section-title light">Reserve your table</h2>
-        <p class="light-copy">
-          Tell us when you'd like to come and how big your party is. Submitting will create your
-          reservation request and open a pre-filled email to our host stand — we'll confirm by
-          email. For same-day or large parties, please note it in your request.
-        </p>
-        <ul class="reserve-facts">
-          <li><strong>Party of 9+?</strong> Add a note below and we'll confirm by email.</li>
-          <li><strong>Same-day seating?</strong> Send a request — we'll always try.</li>
-          <li><strong>Lakeside patio</strong> is first-come, weather permitting.</li>
+    <div class="facts">
+      <div>
+        <h3>The land</h3>
+        <ul>
+          <li>18 forested acres on a private lakefront peninsula</li>
+          <li>Former resort — includes a bar &amp; grill and RV parking lots</li>
+          <li>6 buildings: main house, 3 cabins, and a multi-level garage with rooms</li>
+          <li>3 private shoreline cabins, one to three bedrooms, each with full kitchen, bathroom, and a back porch on the lake</li>
+          <li>Buried metal food-storage building</li>
+          <li>Self-sufficient: grid power + solar with battery backup, wood stoves, large propane generator, private well</li>
+          <li>Chicken house &amp; yard, acres of gardens, and a greenhouse</li>
+          <li>Ham radios, radiation detectors, and stockpiled supplies</li>
+          <li>Remote from big cities — with year-round access roads; ATV and snowmobile country</li>
+          <li>Peninsula setting — naturally easy to defend</li>
         </ul>
       </div>
+      <div>
+        <div class="mini-photos">
+          <figure><img src="img/peninsula.jpg" alt="Aerial of the forested peninsula and lake"><figcaption>Private lakefront peninsula</figcaption></figure>
+          <figure><img src="img/rv.jpg" alt="RV sites among the trees"><figcaption>RV lots</figcaption></figure>
+          <figure><img src="img/greenhouse.jpg" alt="Greenhouse, garden beds and propane tanks"><figcaption>Greenhouse, gardens &amp; propane</figcaption></figure>
+          <figure><img src="img/cabins_picnic.jpg" alt="Cabins and picnic table among the pines"><figcaption>Cabins among the pines</figcaption></figure>
+          <figure><img src="img/solar_battery.jpg" alt="Solar inverter and battery bank"><figcaption>Solar inverter &amp; battery backup</figcaption></figure>
+          <figure><img src="img/guard_dog.jpg" alt="Guard dog wading in the lake"><figcaption>One of our guard dogs</figcaption></figure>
+        </div>
+        <div class="confidential"><b>Confidential location.</b> The exact location is disclosed only after a signed NDA and an initial screening call.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="reserve-card">
-        <!-- No backend required. This form validates in the browser, saves the request to
-             localStorage, and opens a pre-filled email. To route submissions to a service
-             instead, set the form's action to your Formspree endpoint and method="post". -->
-        <form id="reserveForm" novalidate>
-          <div class="field-row">
-            <div class="field">
-              <label for="rName">Full name</label>
-              <input type="text" id="rName" name="name" autocomplete="name" required />
-              <small class="error" data-for="rName"></small>
-            </div>
-            <div class="field">
-              <label for="rParty">Party size</label>
-              <select id="rParty" name="party" required>
-                <option value="">Select…</option>
-                <option>1</option><option>2</option><option>3</option><option>4</option>
-                <option>5</option><option>6</option><option>7</option><option>8</option>
-                <option value="9+">9 or more (add a note)</option>
-              </select>
-              <small class="error" data-for="rParty"></small>
-            </div>
-          </div>
+<section class="access" id="access">
+  <div class="wrap">
+    <div class="eyebrow">Reach us by land, water, or air</div>
+    <h2>Three ways in — and nearly everywhere else has one</h2>
 
-          <div class="field-row">
-            <div class="field">
-              <label for="rEmail">Email</label>
-              <input type="email" id="rEmail" name="email" autocomplete="email" required />
-              <small class="error" data-for="rEmail"></small>
-            </div>
-            <div class="field">
-              <label for="rPhone">Phone</label>
-              <input type="tel" id="rPhone" name="phone" autocomplete="tel" required />
-              <small class="error" data-for="rPhone"></small>
-            </div>
-          </div>
+    <div class="way">
+      <div class="way-img"><img src="img/peninsula.jpg" alt="Forested peninsula from the air"></div>
+      <div>
+        <div class="count"><img src="img/lantern.png" alt=""></div>
+        <div class="tag">"one if by land"</div>
+        <h3>The Land</h3>
+        <p>A beautiful drive through the forests of north central Wisconsin brings you in on year-round roads, far from big-city noise and crowds. Come by ATV, by snowmobile in winter, or hike in to see the wildlife. Cabins, rooms, and RV sites sit back among the trees.</p>
+      </div>
+    </div>
 
-          <div class="field-row">
-            <div class="field">
-              <label for="rDate">Date</label>
-              <input type="date" id="rDate" name="date" required />
-              <small class="error" data-for="rDate"></small>
-            </div>
-            <div class="field">
-              <label for="rTime">Time</label>
-              <select id="rTime" name="time" required>
-                <option value="">Pick a date first…</option>
-              </select>
-              <small class="error" data-for="rTime"></small>
-            </div>
-          </div>
+    <div class="way">
+      <div class="way-img"><img src="img/dock_now.jpg" alt="Today's small dock and the lake" style="margin-bottom:12px"><img src="img/dock.jpg" alt="Plan drawing of the new dock: single 6-foot pier, six canoes, pontoon at the T-head"></div>
+      <div>
+        <div class="count"><img src="img/lantern.png" alt=""><img src="img/lantern.png" alt=""></div>
+        <div class="tag">"two if by sea"</div>
+        <h3>The Dock — six boats + a pontoon</h3>
+        <p>Today the property has two small docks (top). Part of this raise replaces them with one large dock (plan, bottom) and buys a party pontoon boat for guest rental. Other resorts and vacation homes share the big lake, so guests can paddle over for a boxed lunch, a cold drink, or dinner.</p>
+        <ul>
+          <li>Three boats tie up per side along a single main pier</li>
+          <li>A T-head at the end berths the party pontoon boat</li>
+          <li>Meets Wisconsin permit-exempt limits: pier ≤ 6 ft wide, loading platform under 200 sq ft</li>
+          <li>Heavy pilings, cross-braced, anchored to a reinforced shore landing</li>
+          <li>Paddle about 15 minutes to the restaurant; floatplanes can taxi to the T-head</li>
+        </ul>
+      </div>
+    </div>
 
-          <div class="field-row">
-            <div class="field">
-              <label for="rSeating">Seating preference</label>
-              <select id="rSeating" name="seating">
-                <option value="No preference">No preference</option>
-                <option value="Indoor dining room">Indoor dining room</option>
-                <option value="Lakeside patio (weather permitting)">Lakeside patio (weather permitting)</option>
-                <option value="Bar / lounge">Bar / lounge</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="rOccasion">Occasion <span class="opt">(optional)</span></label>
-              <select id="rOccasion" name="occasion">
-                <option value="">—</option>
-                <option>Birthday</option>
-                <option>Anniversary</option>
-                <option>Date night</option>
-                <option>Business</option>
-                <option>Celebration</option>
-              </select>
-            </div>
-          </div>
+    <div class="way">
+      <div class="way-img"><img src="img/airstrip_plan.jpg" alt="Aerial view showing the planned 1,700-foot airstrip on the peninsula"></div>
+      <div>
+        <div class="count"><img src="img/lantern.png" alt=""><img src="img/lantern.png" alt=""><img src="img/lantern.png" alt=""></div>
+        <div class="tag">"three if by air"</div>
+        <h3>The Airfield</h3>
+        <p>Fortitude Ranch has built airfields at other locations. Here we will have a private airstrip right on the property — pilots can fly in for breakfast, a weekend, or a long stay.</p>
+        <ul>
+          <li>1,700 ft long, 100 ft wide, laid out across the peninsula</li>
+          <li>Aircraft needing more distance can wait for favorable winds</li>
+          <li>The cleared strip doubles as a defensive line on the only land approach</li>
+          <li>In a collapse, private planes will be able to land here for refuge</li>
+          <li>Fortitude Ranch members can vacation — and shelter — at any location in the network, and other sites also have nearby airports or on-property strips</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <div class="field">
-            <label for="rNotes">Special requests <span class="opt">(optional)</span></label>
-            <textarea id="rNotes" name="notes" rows="3" placeholder="Allergies, high chair, accessibility, a quiet corner…"></textarea>
-          </div>
+<section id="stay">
+  <div class="wrap">
+    <div class="eyebrow">The getaway</div>
+    <h2>Stay, dine, and play — four seasons</h2>
+    <p class="lead">Few of us can afford a lakefront vacation home — but anyone can stay at Three If By Air. Here's what guests will find once it opens to the public.</p>
+    <div class="cards">
+      <div class="card"><h3>Stay</h3><p>Three shoreline cabins with one to three bedrooms, full kitchen and bath, plus rentable rooms. Sit on the back porch for a private view of the lake.</p></div>
+      <div class="card"><h3>RV &amp; tiny homes</h3><p>Bring your RV or rent one for a vacation stay — or live here full time in your RV or tiny home, plant a garden, and enjoy a rural homesteading life.</p></div>
+      <div class="card"><h3>Dine</h3><p>A restaurant in the former bar &amp; grill — fresh mini-donuts and eggs from our own hens each morning. Canoe over for a meal.</p></div>
+      <div class="card"><h3>Dockside</h3><p>Box lunches, cold drinks, and ice service right at the dock.</p></div>
+      <div class="card"><h3>Play on the water</h3><p>Swimming, canoeing, kayaking, and fishing on a private lakefront.</p></div>
+      <div class="card"><h3>Play on land</h3><p>Forest hiking, frisbee golf, paintball, and marshmallows over the campfire. Our guard dogs keep you company if the fish don't.</p></div>
+      <div class="card"><h3>Indoors</h3><p>Pool table, cards, and board games — fun that works even when the grid and internet don't.</p></div>
+      <div class="card"><h3>Store &amp; more</h3><p>Trailer, car, and boat storage; landing and overnight parking for pilots once the airstrip is built.</p></div>
+    </div>
+    <div class="species">
+      <div class="card"><h3>Fishing · our lake</h3><ul><li>Walleye</li><li>Muskellunge</li><li>Northern pike</li><li>Largemouth bass</li><li>Smallmouth bass</li><li>Bluegill</li><li>Black crappie</li><li>Yellow perch</li></ul></div>
+      <div class="card"><h3>Hunting · northern woods</h3><ul><li>Whitetail deer</li><li>Ruffed grouse</li><li>Black bear</li><li>Wild turkey</li><li>Ducks &amp; geese</li><li>Snowshoe hare</li></ul></div>
+    </div>
+    <p class="planned">Summer on the water, fall and winter in the woods — with a Winter Hunting/Fishing guest pass built around it. Public resort services and the restaurant open after Three If By Air buys the property and completes renovations.</p>
+  </div>
+</section>
 
-          <button type="submit" class="btn btn-gold btn-block">Request Reservation</button>
-          <p class="form-fineprint">A request is not a confirmed booking until we reply. We'll be in touch shortly.</p>
-        </form>
+<section class="fr" id="fortitude">
+  <div class="wrap">
+    <div class="eyebrow">The getaway that's also your insurance</div>
+    <h2>Backed by Fortitude Ranch</h2>
+    <p class="lead">Three If By Air joins Fortitude Ranch as a franchisee — plugging into an established brand, a base of preparedness-minded members, and a proven operating playbook. A traditional lake resort is seasonal; adding a survival community makes the same property a year-round business.</p>
+    <div class="duo">
+      <div class="box getaway">
+        <h3>The getaway</h3>
+        <p>A lakefront vacation you reach by car, boat, or plane.</p>
+        <ul><li>Cabins, private rooms &amp; RV park</li><li>Restaurant — fresh mini-donuts &amp; farm eggs</li><li>Swimming, canoeing, kayaking, fishing</li><li>Hiking, frisbee golf, paintball &amp; more</li><li>Guests pay to visit — day and overnight</li></ul>
+      </div>
+      <div class="box insure">
+        <h3>The insurance</h3>
+        <p>A place to go when the world stops working.</p>
+        <ul><li>Fortitude Ranch survival-community membership</li><li>Professionally staffed &amp; provisioned</li><li>Ready for grid-down, pandemic, war, or worse</li><li>Members pay annually for protection</li><li>Defended, not looted — staffed to protect members and the property</li></ul>
+      </div>
+    </div>
+    <div class="fr-strip">
+      <img src="img/fr_logo.png" alt="Fortitude Ranch logo">
+      <div class="stat">Largest<small>U.S. survival community network</small></div>
+      <div class="stat">8 states<small>of operating survival communities</small></div>
+      <div class="stat">Turn-key<small>franchise: brand, systems, and demand</small></div>
+    </div>
+    <div class="steve">
+      <img src="img/steve.jpg" alt="Steve, Ranch Manager">
+      <div><div class="eyebrow">Meet the Ranch Manager</div><h3 style="color:#fff">Steve</h3><p>A former Navy officer, gun store owner, and firearms trainer, Steve manages the Wisconsin ranch — staff with the expertise to take charge and keep members alive. Fortitude Ranch is a network: members can vacation, and shelter, at any of its 8 locations.</p></div>
+    </div>
+  </div>
+</section>
 
-        <!-- Confirmation shown after submit -->
-        <div class="reserve-success" id="reserveSuccess" hidden>
-          <div class="success-mark" aria-hidden="true">
-            <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none"/><path fill="none" d="M14 27l8 8 16-16"/></svg>
-          </div>
-          <h3>Reservation request sent</h3>
-          <p id="successSummary"></p>
-          <p class="conf-ref">Reference: <span id="confRef"></span></p>
-          <p class="success-note">
-            An email draft should have opened for you to send. If it didn't, please email us
-            and mention your reference number.
-          </p>
-          <button type="button" class="btn btn-ghost dark" id="reserveAgain">Make another request</button>
+<section id="invest">
+  <div class="wrap">
+    <div class="eyebrow">The investment</div>
+    <h2>Own a piece of Three If By Air</h2>
+    <p class="lead">Real land, a proven franchise model, and two customer bases on one property — with a dozen income streams so no single one has to carry the business.</p>
+
+    <div class="split">
+      <div>
+        <h3>Diverse revenue</h3>
+        <ul class="streams">
+          <li>Fortitude Ranch memberships</li><li>Restaurant &amp; breakfast</li>
+          <li>Dockside box lunch, drinks, ice</li><li>Cabin &amp; room stays</li>
+          <li>RV park</li><li>Airstrip landing &amp; tie-down fees</li>
+          <li>Overnight &amp; park fees</li><li>Trailer, car &amp; boat storage</li>
+          <li>Paintball &amp; paid activities</li><li>Boat, bike &amp; canoe rentals</li>
+        </ul>
+      </div>
+      <div class="ask">
+        <div class="eyebrow">Raising</div>
+        <div class="big">$1.2M</div>
+        <p style="margin:.4em 0 0;color:#d6dccf">in an equity crowdfunding community round. A mortgage funds the balance of the ~$1.925M total project.</p>
+        <div class="uses">
+          <div class="use"><span>Property purchase (from Fortitude Ranch WI)</span><b>$1,250K</b></div><div class="bar"><i style="width:65%"></i></div>
+          <div class="use"><span>Site infrastructure</span><b>$300K</b></div><div class="bar"><i style="width:15.6%"></i></div>
+          <div class="use"><span>Fortitude Ranch franchise</span><b>$150K</b></div><div class="bar"><i style="width:7.8%"></i></div>
+          <div class="use"><span>Restaurant build-out</span><b>$110K</b></div><div class="bar"><i style="width:5.7%"></i></div>
+          <div class="use"><span>Lodging &amp; rooms</span><b>$100K</b></div><div class="bar"><i style="width:5.2%"></i></div>
+          <div class="use"><span>Legal &amp; licensing</span><b>$15K</b></div><div class="bar"><i style="width:.8%"></i></div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===================== VISIT / HOURS / LOCATION ===================== -->
-  <section class="section visit" id="visit">
-    <div class="container visit-grid">
-      <div class="visit-col">
-        <p class="eyebrow">Hours</p>
-        <h2 class="section-title">When we're open</h2>
-        <ul class="hours-list" id="hoursList">
-          <li><span>Monday</span><span>Closed</span></li>
-          <li><span>Tuesday</span><span>4:00 – 9:00 PM</span></li>
-          <li><span>Wednesday</span><span>4:00 – 9:00 PM</span></li>
-          <li><span>Thursday</span><span>4:00 – 9:00 PM</span></li>
-          <li><span>Friday</span><span>11:00 AM – 10:00 PM</span></li>
-          <li><span>Saturday</span><span>10:00 AM – 10:00 PM</span></li>
-          <li><span>Sunday</span><span>10:00 AM – 9:00 PM</span></li>
+    <div class="tables">
+      <div>
+        <h3>"Come Aboard" — invest from $250</h3>
+        <table>
+          <tr><th>Package</th><th>Price</th><th>Equity</th><th>Thank-you perks</th></tr>
+          <tr><td>Founding Supporter</td><td class="n">$250</td><td class="n">0.01%</td><td>2 free breakfasts · founders-wall name · decal</td></tr>
+          <tr><td>Friend</td><td class="n">$500</td><td class="n">0.02%</td><td>4 free breakfasts · member rates · hat</td></tr>
+          <tr><td>Patron</td><td class="n">$1,000</td><td class="n">0.04%</td><td>1 free night · member rates</td></tr>
+          <tr><td>Advocate</td><td class="n">$2,500</td><td class="n">0.10%</td><td>2 free nights · priority booking</td></tr>
+          <tr><td>Partner</td><td class="n">$5,000</td><td class="n">0.20%</td><td>Free 3-night weekend · priority booking</td></tr>
+        </table>
+        <p class="tnote">All equity is priced at the same $2.5M valuation ($25,000 per 1%).</p>
+      </div>
+      <div>
+        <h3>"Big Fish" — founding partner packages</h3>
+        <table>
+          <tr><th>Tier</th><th>Equity</th><th>Includes</th><th>From</th></tr>
+          <tr><td>Luxury</td><td class="n">2.0%</td><td>2-week stay, 14 breakfasts</td><td class="n">$61,000</td></tr>
+          <tr><td>Economy</td><td class="n">1.0%</td><td>1-week stay, 7 breakfasts</td><td class="n">$32,000</td></tr>
+          <tr><td>Spartan</td><td class="n">0.5%</td><td>1-week stay, 7 breakfasts</td><td class="n">$17,500</td></tr>
+          <tr><td>RV spot</td><td class="n">0.5%</td><td>1-week stay, 7 breakfasts</td><td class="n">$19,500</td></tr>
+          <tr><td>Guest pass</td><td class="n">0.25%</td><td>Summer, winter hunt/fish, or pilot fly-in</td><td class="n">$11,500</td></tr>
+          <tr><td>Board seat</td><td class="n">5.0%</td><td>Board of Directors seat</td><td class="n">$125,000</td></tr>
+        </table>
+        <p class="tnote">Each price = equity at the $2.5M valuation plus a separately priced 10-year Fortitude Ranch membership &amp; visit package. Price varies by room size.</p>
+      </div>
+    </div>
+
+    <div class="terms">
+      <div class="card"><h3>Structure</h3><p>Regulation Crowdfunding (Reg CF) community round, hosted on Wefunder.</p></div>
+      <div class="card"><h3>Financials</h3><p>Independent CPA-reviewed statements, prepared under U.S. GAAP.</p></div>
+      <div class="card"><h3>Open to everyone</h3><p>Accredited and non-accredited investors welcome, subject to Reg CF limits.</p></div>
+      <div class="card"><h3>All-or-nothing</h3><p>Funds are returned if the minimum target isn't reached.</p></div>
+      <div class="card"><h3>Choose your perk</h3><p>Vacation-use packages or Fortitude Ranch survival membership.</p></div>
+      <div class="card"><h3>Prefer not to invest?</h3><p>Prepaid visit passes (stay credit, weekend getaways, season and day passes) will also be offered — no equity.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="leadership" style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Leadership</div>
+    <h2>Proven operator, proven model</h2>
+    <div class="leader">
+      <div class="photo"><img src="img/drew.jpg" alt="Col. Drew Miller, USAF (Ret.)"></div>
+      <div>
+        <h3>Col. Drew Miller, USAF (Ret.) — Founder · CFO &amp; Business Advisor</h3>
+        <p>The leader who built the network this property joins, and part of the Three If By Air management team.</p>
+        <ul>
+          <li><b>CEO, Fortitude Ranch</b> — built the largest U.S. survival community network, operating in 8 states</li>
+          <li><b>CEO, Heartland Management Consulting Group</b> — 10+ years helping businesses improve profitability</li>
+          <li><b>Corporate Planning &amp; Development, ConAgra</b> — 7 years across business development</li>
+          <li><b>Colonel, U.S. Air Force (Ret.)</b> — USAFA honor graduate, Class of 1980</li>
+          <li><b>Harvard PhD</b> — Public Policy &amp; Operations Research; continuity-of-operations expert</li>
         </ul>
-        <p class="hours-note">Weekend brunch served Sat &amp; Sun, 10:00 AM – 1:00 PM.</p>
-      </div>
-
-      <div class="visit-col">
-        <p class="eyebrow">Find Us</p>
-        <h2 class="section-title">On the lakeshore</h2>
-        <address class="contact-block">
-          <p><strong>3 If By Air</strong><br />
-          Wisconsin</p>
-          <div class="visit-actions">
-            <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=Wisconsin" target="_blank" rel="noopener">Get Directions</a>
-            <a class="btn btn-ghost dark" href="#reserve">Reserve a Table</a>
-          </div>
-        </address>
+        <div class="team">
+          <div class="card"><h3>Elliot</h3><p>CEO &amp; Restaurant Manager</p></div>
+          <div class="card"><h3>Ronny</h3><p>Construction Manager — mechanic and builder with extensive experience building, repairing, and maintaining buildings, vehicles, and machinery, plus Fortitude Ranch experience.</p></div>
+        </div>
+        <div class="book">
+          <img src="img/book.jpg" alt="Book cover: Preparing to Survive in the Age of Collapse">
+          <div><b>The business that survives the collapse.</b><br>In <em>Preparing to Survive in the Age of Collapse</em> (Skyhorse, 2026), Drew Miller argues most businesses will not survive a collapse. Three If By Air is built to be one that does.</div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="3IfByAir_v3-1.png" alt="3 If By Air" class="footer-logo" />
-        <p>Restaurant · Lakefront Resort · Homestead Community · Wisconsin</p>
-      </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#experience">Experience</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reserve">Reservations</a>
-        <a href="#visit">Visit</a>
-      </nav>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook">Facebook</a>
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="TripAdvisor">TripAdvisor</a>
-      </div>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Drive, boat, or fly — enjoy, and be ready for anything</h2>
+    <p class="lead">Reserve your place in the Three If By Air community round, or contact us to schedule a screening call and learn the property's location under NDA.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="WEFUNDER-LINK-HERE">Reserve on Wefunder</a>
     </div>
-    <div class="footer-base">
-      <p>&copy; <span id="year"></span> 3 If By Air. All rights reserved. · One if by land, two if by sea — three if by air.</p>
-    </div>
-  </footer>
+    <!-- CONTACT EMAIL: add here when available -->
+    <p class="info">Contact email coming soon.</p>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<footer>
+  <div class="wrap">
+    <div class="tagline">One if by land, two if by sea — three if by air.</div>
+    3IfByAir.com · A vacation, recreation, and Fortitude Ranch survival community · Fortitude Ranch: Prepare for the Worst · Enjoy the Present
+    <div class="legal">
+      <b>Testing the Waters.</b> Three If By Air is considering a Regulation Crowdfunding offering and is testing the waters to gauge investor interest. No money or other consideration is being solicited, and if sent in response, will not be accepted. No offer to buy securities can be accepted and no part of the purchase price can be received until a Form C is filed and only through an intermediary's platform. Any indication of interest involves no obligation or commitment of any kind. This website is for informational purposes only and is not an offer to sell or a solicitation of an offer to buy securities.
+      <br><br>The property is currently owned by Fortitude Ranch (DP WI LLC) and will be sold to Three If By Air only if the offering is funded. Property photos are of the actual Wisconsin site. Public resort and restaurant services, the new dock, and the airstrip are planned. © 2026 Three If By Air.
+    </div>
+  </div>
+</footer>
 </body>
 </html>
